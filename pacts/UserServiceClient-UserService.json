@@ -1,0 +1,86 @@
+{
+    "provider": {
+        "name": "UserService"
+    },
+    "consumer": {
+        "name": "UserServiceClient"
+    },
+    "interactions": [
+        {
+            "description": "A request for userId 1001",
+            "request": {
+                "method": "GET",
+                "path": "/users/1001"
+            },
+            "response": {
+                "status": 200,
+                "headers": {
+                    "Content-Type": "application/json"
+                },
+                "body": {
+                    "firstName": "Hidayath",
+                    "lastName": "S",
+                    "userId": "1001",
+                    "email": "hiddu91@gmail.com"
+                },
+                "matchingRules": {
+                    "body": {
+                        "$.firstName": {
+                            "matchers": [
+                                {
+                                    "match": "type"
+                                }
+                            ],
+                            "combine": "AND"
+                        },
+                        "$.lastName": {
+                            "matchers": [
+                                {
+                                    "match": "type"
+                                }
+                            ],
+                            "combine": "AND"
+                        },
+                        "$.email": {
+                            "matchers": [
+                                {
+                                    "match": "type"
+                                }
+                            ],
+                            "combine": "AND"
+                        },
+                        "$.userId": {
+                            "matchers": [
+                                {
+                                    "match": "type"
+                                }
+                            ],
+                            "combine": "AND"
+                        },
+                        "$.message": {
+                            "matchers": [
+                                {
+                                    "match": "type"
+                                }
+                            ],
+                            "combine": "AND"
+                        }
+                    }
+                }
+            },
+            "providerStates": [
+                {
+                    "name": "There is a user with userId 1001 having firstName as Hidayath"
+                }
+            ]
+        }
+    ],
+    "metadata": {
+        "pact-specification": {
+            "version": "3.0.0"
+        },
+        "pact-jvm": {
+            "version": "3.5.10"
+        }
+    }
+}
