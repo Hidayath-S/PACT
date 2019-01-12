@@ -1,0 +1,69 @@
+{
+    "provider": {
+        "name": "getCountryService"
+    },
+    "consumer": {
+        "name": "getCountryServiceClient"
+    },
+    "interactions": [
+        {
+            "description": "A request for alpha2_code IN",
+            "request": {
+                "method": "GET",
+                "path": "/country/get/iso2code/IN"
+            },
+            "response": {
+                "status": 200,
+                "headers": {
+                    "Content-Type": "application/json"
+                },
+                "body": {
+                    "name": "India",
+                    "alpha3_code": "IND",
+                    "alpha2_code": "IN"
+                },
+                "matchingRules": {
+                    "body": {
+                        "$.name": {
+                            "matchers": [
+                                {
+                                    "match": "type"
+                                }
+                            ],
+                            "combine": "AND"
+                        },
+                        "$.alpha2_code": {
+                            "matchers": [
+                                {
+                                    "match": "type"
+                                }
+                            ],
+                            "combine": "AND"
+                        },
+                        "$.alpha3_code": {
+                            "matchers": [
+                                {
+                                    "match": "type"
+                                }
+                            ],
+                            "combine": "AND"
+                        }
+                    }
+                }
+            },
+            "providerStates": [
+                {
+                    "name": "There is a country with alpha2_code as IN having name as India"
+                }
+            ]
+        }
+    ],
+    "metadata": {
+        "pact-specification": {
+            "version": "3.0.0"
+        },
+        "pact-jvm": {
+            "version": "3.5.10"
+        }
+    }
+}

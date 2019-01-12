@@ -1,0 +1,87 @@
+{
+    "provider": {
+        "name": "UserServicePOST"
+    },
+    "consumer": {
+        "name": "UserServicePOSTClient"
+    },
+    "interactions": [
+        {
+            "description": "A request to create user with firstName as Hidayath",
+            "request": {
+                "method": "POST",
+                "path": "/users"
+            },
+            "response": {
+                "status": 200,
+                "headers": {
+                    "Content-Type": "application/json"
+                },
+                "body": {
+                    "firstName": "Hidayath",
+                    "lastName": "S",
+                    "message": "User Created successfully",
+                    "userId": "1001",
+                    "email": "hiddu91@gmail.com"
+                },
+                "matchingRules": {
+                    "body": {
+                        "$.firstName": {
+                            "matchers": [
+                                {
+                                    "match": "type"
+                                }
+                            ],
+                            "combine": "AND"
+                        },
+                        "$.lastName": {
+                            "matchers": [
+                                {
+                                    "match": "type"
+                                }
+                            ],
+                            "combine": "AND"
+                        },
+                        "$.email": {
+                            "matchers": [
+                                {
+                                    "match": "type"
+                                }
+                            ],
+                            "combine": "AND"
+                        },
+                        "$.userId": {
+                            "matchers": [
+                                {
+                                    "match": "type"
+                                }
+                            ],
+                            "combine": "AND"
+                        },
+                        "$.message": {
+                            "matchers": [
+                                {
+                                    "match": "type"
+                                }
+                            ],
+                            "combine": "AND"
+                        }
+                    }
+                }
+            },
+            "providerStates": [
+                {
+                    "name": "user wants to create a new user with firstName as Hidayath"
+                }
+            ]
+        }
+    ],
+    "metadata": {
+        "pact-specification": {
+            "version": "3.0.0"
+        },
+        "pact-jvm": {
+            "version": "3.5.10"
+        }
+    }
+}
