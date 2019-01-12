@@ -17,28 +17,26 @@ import java.util.Map;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
-public class MobileWsClientTest {
+public class user_POSTClientTest {
 	@Rule
-	public PactProviderRuleMk2 provider= new PactProviderRuleMk2("UserService","localhost",1234,this); 
+	public PactProviderRuleMk2 provider= new PactProviderRuleMk2("UserServiceP","localhost",8082,this); 
 	
-@Pact(consumer="UserServiceClient")
+@Pact(consumer="UserServicePClient")
 public RequestResponsePact createPact(PactDslWithProvider builder) {
 	Map<String, String> headers=new HashMap();
 	headers.put("Content-Type", "application/json");
 	
 	
 	DslPart userDetails= new PactDslJsonBody()
-			.stringType("firstName","Hidayath")
-			.stringType("lastName","S")
-			.stringType("email","hiddu91@gmail.com")
-			.stringType("userId","1001")
-			.stringType("message",null)
+			.integerType("id", 1)
+			.stringType("first_name","George")
+			.stringType("last_name","Bluth")
 			.asBody();
 	
 	return builder
 			.given("There is a user with userId 1001 having firstName as Hidayath")
             .uponReceiving("A request for userId 1001")
-            .path("/users/1001")
+            .path("/api/users")
             .method("GET")
             .willRespondWith()
             .status(200)
@@ -51,8 +49,9 @@ public RequestResponsePact createPact(PactDslWithProvider builder) {
 @PactVerification()
 public void doTest() {
 	System.setProperty("pact.rootDir","../pacts");
-	String fName= new MobileWsClient(provider.getPort()).getUserDetails("1001");
-	System.out.println("According to test fName="+fName);
+	//String fName= new MobileWsClient(provider.getPort()).getUserDetails("1001");
+	String response= new users_POSTClient(provider.getPort()).getUserDetails();
+	System.out.println("According to test fName="+response);
 	
 	
 }

@@ -17,11 +17,11 @@ import java.util.Map;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
-public class MobileWsClientTest {
+public class MobileWsClientTestPOST {
 	@Rule
-	public PactProviderRuleMk2 provider= new PactProviderRuleMk2("UserService","localhost",1234,this); 
+	public PactProviderRuleMk2 provider= new PactProviderRuleMk2("UserServicePOST","localhost",1234,this); 
 	
-@Pact(consumer="UserServiceClient")
+@Pact(consumer="UserServicePOSTClient")
 public RequestResponsePact createPact(PactDslWithProvider builder) {
 	Map<String, String> headers=new HashMap();
 	headers.put("Content-Type", "application/json");
@@ -32,14 +32,14 @@ public RequestResponsePact createPact(PactDslWithProvider builder) {
 			.stringType("lastName","S")
 			.stringType("email","hiddu91@gmail.com")
 			.stringType("userId","1001")
-			.stringType("message",null)
+			.stringType("message","User Created successfully")
 			.asBody();
 	
 	return builder
-			.given("There is a user with userId 1001 having firstName as Hidayath")
-            .uponReceiving("A request for userId 1001")
-            .path("/users/1001")
-            .method("GET")
+			.given("user wants to create a new user with firstName as Hidayath")
+            .uponReceiving("A request to create user with firstName as Hidayath")
+            .path("/users")
+            .method("POST")
             .willRespondWith()
             .status(200)
             .headers(headers)
@@ -51,8 +51,8 @@ public RequestResponsePact createPact(PactDslWithProvider builder) {
 @PactVerification()
 public void doTest() {
 	System.setProperty("pact.rootDir","../pacts");
-	String fName= new MobileWsClient(provider.getPort()).getUserDetails("1001");
-	System.out.println("According to test fName="+fName);
+	String userId= new MobileWsClientPOST(provider.getPort()).postUserDetails();
+	System.out.println("According to test userId="+userId);
 	
 	
 }

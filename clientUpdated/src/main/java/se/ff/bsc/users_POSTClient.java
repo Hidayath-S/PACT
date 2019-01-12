@@ -30,14 +30,14 @@ public class users_POSTClient {
 	
 	
 	public String getUserDetails() {
-		String url=String.format("https://reqres.in//api/users");
+		String url=String.format("https://reqres.in:%d/api/users",port);
 		System.out.println("using the URL="+url);
 		try {
 			HttpResponse r=Request.Get(url).addHeader("Accept","application/json").execute().returnResponse();
 		String json=EntityUtils.toString(r.getEntity());
 		System.out.println("Json="+json);
 		JSONObject jsonobj=new JSONObject(json);
-		String fName=jsonobj.get("firstName").toString();
+		String fName=jsonobj.get("page").toString();
 		return fName;
 		
 		

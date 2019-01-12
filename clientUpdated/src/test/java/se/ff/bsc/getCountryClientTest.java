@@ -28,6 +28,8 @@ public RequestResponsePact createPact(PactDslWithProvider builder) {
 	
 	
 	DslPart userDetails= new PactDslJsonBody()
+			
+			
 			.stringType("name","India")
 			.stringType("alpha2_code","IN")
 			.stringType("alpha3_code","IND")
@@ -36,11 +38,12 @@ public RequestResponsePact createPact(PactDslWithProvider builder) {
 	return builder
 			.given("There is a country with alpha2_code as IN having name as India")
             .uponReceiving("A request for alpha2_code IN")
-            .path("/country/get/iso3code/IND")
+            .path("/country/get/iso2code/IN")
             .method("GET")
-            .willRespondWith().body(userDetails)
+            .willRespondWith()
             .status(200)
             .headers(headers)
+            .body(userDetails)
             .toPact();
 	
 }
