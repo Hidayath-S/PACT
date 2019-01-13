@@ -19,7 +19,6 @@
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
       <version>4.12</version>
-      <scope>test</scope>
     </dependency>
     <!-- https://mvnrepository.com/artifact/au.com.dius/pact-jvm-provider-junit -->
     <dependency>

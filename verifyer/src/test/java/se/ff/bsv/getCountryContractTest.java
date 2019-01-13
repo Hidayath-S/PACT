@@ -13,6 +13,7 @@ import org.junit.BeforeClass;
 import org.junit.ClassRule;
 import org.junit.runner.RunWith;
 
+import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Map;
 
@@ -23,6 +24,12 @@ import java.util.Map;
 //@PactUrl(urls = {"http://services.groupkt.com/country/get/iso3code/IND"} )
 
 public class getCountryContractTest {
+	//URL domain = new URL("http://services.groupkt.com");
+	//URL url = new URL(domain + "/country/get/iso3code/IND");
+
+	URL url;
+
+	
 
 	@State("There is a country with alpha2_code as IN having name as India") // Method will be run before testing
 																				// interactions that require "with-data"
@@ -31,9 +38,18 @@ public class getCountryContractTest {
 		System.out.println("There is a country with alpha2_code as IN having name as India");
 	}
 
+	
+	public URL getCountryContractTest() {
+	    try {
+	        url = new URL("http://services.groupkt.com/country/get/iso3code/IND");
+	        System.out.println(url);
+	    } catch (MalformedURLException ex) {
+	        throw new RuntimeException(ex);
+	    }
+		return url;
+	}
 	@TestTarget // Annotation denotes Target that will be used for tests
-    
-    public final Target target = new HttpTarget(1234);// Out-of-the-box implementation of Target (for more information take a look at Test Target section)
+    public final Target target = new HttpTarget(url);// Out-of-the-box implementation of Target (for more information take a look at Test Target section)
     //public final Target target = new HttpTarget("http", "services.groupkt.com",);
 
 }
