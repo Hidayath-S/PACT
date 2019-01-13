@@ -10,12 +10,54 @@
             "description": "A request to create user with firstName as Hidayath",
             "request": {
                 "method": "POST",
-                "path": "/users"
+                "path": "/users",
+                "headers": {
+                    "Content-Type": "application/json; charset=UTF-8"
+                },
+                "body": {
+                    "firstName": "Hidayath",
+                    "lastName": "S",
+                    "email": "hiddu91@gmail.com"
+                },
+                "matchingRules": {
+                    "body": {
+                        "$.firstName": {
+                            "matchers": [
+                                {
+                                    "match": "type"
+                                }
+                            ],
+                            "combine": "AND"
+                        },
+                        "$.lastName": {
+                            "matchers": [
+                                {
+                                    "match": "type"
+                                }
+                            ],
+                            "combine": "AND"
+                        },
+                        "$.email": {
+                            "matchers": [
+                                {
+                                    "match": "type"
+                                }
+                            ],
+                            "combine": "AND"
+                        }
+                    },
+                    "path": {
+                        
+                    },
+                    "header": {
+                        
+                    }
+                }
             },
             "response": {
                 "status": 200,
                 "headers": {
-                    "Content-Type": "application/json"
+                    "Content-Type": "application/json; charset=UTF-8"
                 },
                 "body": {
                     "firstName": "Hidayath",
