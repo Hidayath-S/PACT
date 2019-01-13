@@ -27,5 +27,8 @@
       <artifactId>pact-jvm-provider-junit_2.12</artifactId>
       <version>3.5.10</version>
     </dependency>
+    <!-- https://mvnrepository.com/artifact/info.novatec.testit/pact-provider -->
+
+    
   </dependencies>
 </project>

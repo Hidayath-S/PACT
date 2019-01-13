@@ -26,11 +26,18 @@ public RequestResponsePact createPact(PactDslWithProvider builder) {
 	Map<String, String> headers=new HashMap();
 	headers.put("Content-Type", "application/json");
 	
+	DslPart requestDetails= new PactDslJsonBody()
+			.stringType("firstName","Hidayath")
+			.stringType("lastName","S")
+			.stringType("email","hiddu91@gmail.com")
+			.asBody();
+	
 	
 	DslPart userDetails= new PactDslJsonBody()
 			.stringType("firstName","Hidayath")
 			.stringType("lastName","S")
 			.stringType("email","hiddu91@gmail.com")
+		//	.integerType("userId",1001)
 			.stringType("userId","1001")
 			.stringType("message","User Created successfully")
 			.asBody();
@@ -39,10 +46,11 @@ public RequestResponsePact createPact(PactDslWithProvider builder) {
 			.given("user wants to create a new user with firstName as Hidayath")
             .uponReceiving("A request to create user with firstName as Hidayath")
             .path("/users")
-            .method("POST")
+            .method("POST").
+            body(requestDetails)
             .willRespondWith()
             .status(200)
-            .headers(headers)
+            //.headers(headers)
             .body(userDetails).toPact();
 	
 }

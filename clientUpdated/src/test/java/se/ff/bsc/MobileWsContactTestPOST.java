@@ -1,4 +1,4 @@
-package se.ff.bsv;
+package se.ff.bsc;
 import au.com.dius.pact.provider.junit.PactRunner;
 import au.com.dius.pact.provider.junit.Provider;
 import au.com.dius.pact.provider.junit.State;
@@ -6,6 +6,8 @@ import au.com.dius.pact.provider.junit.loader.PactFolder;
 import au.com.dius.pact.provider.junit.target.HttpTarget;
 import au.com.dius.pact.provider.junit.target.Target;
 import au.com.dius.pact.provider.junit.target.TestTarget;
+import kotlin.Metadata;
+
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.ClassRule;
@@ -28,5 +30,7 @@ public class MobileWsContactTestPOST {
 
     @TestTarget // Annotation denotes Target that will be used for tests
     public final Target target = new HttpTarget("http","localhost",8081,""); // Out-of-the-box implementation of Target (for more information take a look at Test Target section)
+    //public final String target1= new MobileWsClientPOST().postUserDetails();
+    
 
 }
