@@ -20,10 +20,13 @@ public class OpenAPIProviderTest {
 	public OpenAPIProviderTest() throws MalformedURLException {
 	}
 
-	private URL url = new URL("https://services.groupkt.com/country/get/iso3code/IND"); // open API
+	private URL url = new URL("http://services.groupkt.com/country/get/iso3code/IND");
+	int port;// open API
 
 	@TestTarget
-	public final Target target = new HttpTarget(url);
+	//public final Target target = new HttpTarget(url);
+	public final Target target= new HttpTarget("http", "services.groupkt.com", 80, "");
+	//public final Target target = new HttpTarget("http","services.groupkt.com");
 
 	@State({"There is a country with alpha2_code as IN having name as India"})
 	public void getPacts() {
