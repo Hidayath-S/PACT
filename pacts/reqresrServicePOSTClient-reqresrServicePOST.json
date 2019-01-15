@@ -1,0 +1,111 @@
+{
+    "provider": {
+        "name": "reqresrServicePOST"
+    },
+    "consumer": {
+        "name": "reqresrServicePOSTClient"
+    },
+    "interactions": [
+        {
+            "description": "A request to create user with name as morpheus",
+            "request": {
+                "method": "POST",
+                "path": "/api/users",
+                "headers": {
+                    "Content-Type": "application/json; charset=UTF-8"
+                },
+                "body": {
+                    "name": "morpheus",
+                    "job": "leader"
+                },
+                "matchingRules": {
+                    "body": {
+                        "$.name": {
+                            "matchers": [
+                                {
+                                    "match": "type"
+                                }
+                            ],
+                            "combine": "AND"
+                        },
+                        "$.job": {
+                            "matchers": [
+                                {
+                                    "match": "type"
+                                }
+                            ],
+                            "combine": "AND"
+                        }
+                    },
+                    "path": {
+                        
+                    },
+                    "header": {
+                        
+                    }
+                }
+            },
+            "response": {
+                "status": 200,
+                "headers": {
+                    "Content-Type": "application/json; charset=UTF-8"
+                },
+                "body": {
+                    "createdAt": "2019-01-15T12:58:04.614Z",
+                    "name": "morpheus",
+                    "id": "251",
+                    "job": "leader"
+                },
+                "matchingRules": {
+                    "body": {
+                        "$.name": {
+                            "matchers": [
+                                {
+                                    "match": "type"
+                                }
+                            ],
+                            "combine": "AND"
+                        },
+                        "$.job": {
+                            "matchers": [
+                                {
+                                    "match": "type"
+                                }
+                            ],
+                            "combine": "AND"
+                        },
+                        "$.id": {
+                            "matchers": [
+                                {
+                                    "match": "type"
+                                }
+                            ],
+                            "combine": "AND"
+                        },
+                        "$.createdAt": {
+                            "matchers": [
+                                {
+                                    "match": "type"
+                                }
+                            ],
+                            "combine": "AND"
+                        }
+                    }
+                }
+            },
+            "providerStates": [
+                {
+                    "name": "user wants to create a new user with name as morpheus"
+                }
+            ]
+        }
+    ],
+    "metadata": {
+        "pact-specification": {
+            "version": "3.0.0"
+        },
+        "pact-jvm": {
+            "version": "3.5.10"
+        }
+    }
+}
