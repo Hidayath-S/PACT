@@ -18,35 +18,14 @@
                     "Content-Type": "application/json"
                 },
                 "body": {
-                    "name": "India",
-                    "alpha3_code": "IND",
-                    "alpha2_code": "IN"
-                },
-                "matchingRules": {
-                    "body": {
-                        "$.name": {
-                            "matchers": [
-                                {
-                                    "match": "type"
-                                }
-                            ],
-                            "combine": "AND"
-                        },
-                        "$.alpha2_code": {
-                            "matchers": [
-                                {
-                                    "match": "type"
-                                }
-                            ],
-                            "combine": "AND"
-                        },
-                        "$.alpha3_code": {
-                            "matchers": [
-                                {
-                                    "match": "type"
-                                }
-                            ],
-                            "combine": "AND"
+                    "RestResponse": {
+                        "messages": [
+                            "Country found matching code [IND]."
+                        ],
+                        "result": {
+                            "name": "India",
+                            "alpha2_code": "IN",
+                            "alpha3_code": "IND"
                         }
                     }
                 }

@@ -43,7 +43,16 @@ public RequestResponsePact createPact(PactDslWithProvider builder) {
             .willRespondWith()
             .status(200)
             .headers(headers)
-            .body(userDetails)
+            .body("{\r\n" + 
+            		"  \"RestResponse\" : {\r\n" + 
+            		"    \"messages\" : [ \"Country found matching code [IND].\" ],\r\n" + 
+            		"    \"result\" : {\r\n" + 
+            		"      \"name\" : \"India\",\r\n" + 
+            		"      \"alpha2_code\" : \"IN\",\r\n" + 
+            		"      \"alpha3_code\" : \"IND\"\r\n" + 
+            		"    }\r\n" + 
+            		"  }\r\n" + 
+            		"}")
             .toPact();
 	
 }

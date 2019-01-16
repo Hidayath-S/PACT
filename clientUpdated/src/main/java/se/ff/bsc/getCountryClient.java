@@ -38,10 +38,10 @@ public class getCountryClient {
 			HttpResponse r=Request.Get(url).addHeader("Accept","application/json").execute().returnResponse();
 		String json=EntityUtils.toString(r.getEntity());
 		System.out.println("Json="+json);
-	JSONObject jsonobj=new JSONObject(json);
-	//JSONArray result=jsonobj.getJSONArray("name");
-		String cName=jsonobj.getString("name").toString();
-		return cName;
+//	JSONObject jsonobj=new JSONObject(json);
+//	//JSONArray result=jsonobj.getJSONArray("name");
+//		String cName=jsonobj.getString("name").toString();
+//		return cName;
 		
 		
 		
