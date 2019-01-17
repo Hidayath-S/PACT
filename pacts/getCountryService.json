@@ -1,0 +1,54 @@
+{
+    "metaData": {
+        "date": "2019-01-17T15:24:50+0000",
+        "pactJvmVersion": "3.6.1",
+        "reportFormat": "0.0.0"
+    },
+    "provider": {
+        "name": "getCountryService"
+    },
+    "execution": [
+        {
+            "consumer": {
+                "name": "getCountryServiceClient"
+            },
+            "interactions": [
+                {
+                    "interaction": {
+                        "description": "A request for alpha2_code IN",
+                        "request": {
+                            "method": "GET",
+                            "path": "/country/get/iso3code/IND"
+                        },
+                        "response": {
+                            "status": 200,
+                            "headers": {
+                                "Content-Type": "application/json"
+                            },
+                            "body": {
+                                "RestResponse": {
+                                    "result": {
+                                        "name": "India",
+                                        "alpha3_code": "IND",
+                                        "alpha2_code": "IN"
+                                    },
+                                    "messages": [
+                                        "Country found matching code [IND]."
+                                    ]
+                                }
+                            }
+                        },
+                        "providerStates": [
+                            {
+                                "name": "There is a country with alpha2_code as IN having name as India"
+                            }
+                        ]
+                    },
+                    "verification": {
+                        "result": "OK"
+                    }
+                }
+            ]
+        }
+    ]
+}
