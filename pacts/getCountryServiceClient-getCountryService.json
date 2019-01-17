@@ -10,7 +10,7 @@
             "description": "A request for alpha2_code IN",
             "request": {
                 "method": "GET",
-                "path": "/country/get/iso2code/IN"
+                "path": "/country/get/iso3code/IND"
             },
             "response": {
                 "status": 200,
@@ -19,14 +19,14 @@
                 },
                 "body": {
                     "RestResponse": {
-                        "messages": [
-                            "Country found matching code [IND]."
-                        ],
                         "result": {
                             "name": "India",
-                            "alpha2_code": "IN",
-                            "alpha3_code": "IND"
-                        }
+                            "alpha3_code": "IND",
+                            "alpha2_code": "IN"
+                        },
+                        "messages": [
+                            "Country found matching code [IND]."
+                        ]
                     }
                 }
             },
