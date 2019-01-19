@@ -1,6 +1,6 @@
 {
     "metaData": {
-        "date": "2019-01-17T15:24:50+0000",
+        "date": "2019-01-19T12:20:59+0000",
         "pactJvmVersion": "3.6.1",
         "reportFormat": "0.0.0"
     },
@@ -35,6 +35,42 @@
                                     "messages": [
                                         "Country found matching code [IND]."
                                     ]
+                                }
+                            },
+                            "matchingRules": {
+                                "body": {
+                                    "$.RestResponse.messages[0]": {
+                                        "matchers": [
+                                            {
+                                                "match": "type"
+                                            }
+                                        ],
+                                        "combine": "AND"
+                                    },
+                                    "$.RestResponse.result.name": {
+                                        "matchers": [
+                                            {
+                                                "match": "type"
+                                            }
+                                        ],
+                                        "combine": "AND"
+                                    },
+                                    "$.RestResponse.result.alpha2_code": {
+                                        "matchers": [
+                                            {
+                                                "match": "type"
+                                            }
+                                        ],
+                                        "combine": "AND"
+                                    },
+                                    "$.RestResponse.result.alpha3_code": {
+                                        "matchers": [
+                                            {
+                                                "match": "type"
+                                            }
+                                        ],
+                                        "combine": "AND"
+                                    }
                                 }
                             }
                         },

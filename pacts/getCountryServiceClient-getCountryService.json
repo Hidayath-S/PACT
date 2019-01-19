@@ -28,6 +28,42 @@
                             "Country found matching code [IND]."
                         ]
                     }
+                },
+                "matchingRules": {
+                    "body": {
+                        "$.RestResponse.messages[0]": {
+                            "matchers": [
+                                {
+                                    "match": "type"
+                                }
+                            ],
+                            "combine": "AND"
+                        },
+                        "$.RestResponse.result.name": {
+                            "matchers": [
+                                {
+                                    "match": "type"
+                                }
+                            ],
+                            "combine": "AND"
+                        },
+                        "$.RestResponse.result.alpha2_code": {
+                            "matchers": [
+                                {
+                                    "match": "type"
+                                }
+                            ],
+                            "combine": "AND"
+                        },
+                        "$.RestResponse.result.alpha3_code": {
+                            "matchers": [
+                                {
+                                    "match": "type"
+                                }
+                            ],
+                            "combine": "AND"
+                        }
+                    }
                 }
             },
             "providerStates": [

@@ -40,11 +40,17 @@ public RequestResponsePact createPact(PactDslWithProvider builder) throws Except
 	
 	
 	DslPart userDetails= new PactDslJsonBody()
-			
-			
+			.object("RestResponse")
+			.array("messages")
+			.stringType("Country found matching code [IND].")
+			//.array("messages")
+		
+			.closeArray()
+			.object("result")	
 			.stringType("name","India")
 			.stringType("alpha2_code","IN")
 			.stringType("alpha3_code","IND")
+			.closeObject()
 			.asBody();
 	
 	return builder
@@ -56,7 +62,7 @@ public RequestResponsePact createPact(PactDslWithProvider builder) throws Except
             .willRespondWith()
             .status(200)
             .headers(headers)
-            .body(response)
+            .body(userDetails)
             .toPact();
 	
 }
