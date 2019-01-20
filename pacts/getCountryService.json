@@ -1,6 +1,6 @@
 {
     "metaData": {
-        "date": "2019-01-19T12:20:59+0000",
+        "date": "2019-01-20T06:37:31+0000",
         "pactJvmVersion": "3.6.1",
         "reportFormat": "0.0.0"
     },
@@ -18,7 +18,7 @@
                         "description": "A request for alpha2_code IN",
                         "request": {
                             "method": "GET",
-                            "path": "/country/get/iso3code/IND"
+                            "path": "/country/get/iso3code/USA"
                         },
                         "response": {
                             "status": 200,
@@ -62,14 +62,6 @@
                                             }
                                         ],
                                         "combine": "AND"
-                                    },
-                                    "$.RestResponse.result.alpha3_code": {
-                                        "matchers": [
-                                            {
-                                                "match": "type"
-                                            }
-                                        ],
-                                        "combine": "AND"
                                     }
                                 }
                             }
@@ -81,7 +73,36 @@
                         ]
                     },
                     "verification": {
-                        "result": "OK"
+                        "result": "failed",
+                        "body": {
+                            "comparison": {
+                                "$.RestResponse.result.alpha3_code": [
+                                    {
+                                        "mismatch": "Expected 'IND' but received 'USA'",
+                                        "diff": ""
+                                    }
+                                ]
+                            },
+                            "diff": [
+                                "    \"RestResponse\": {",
+                                "-        \"result\": {",
+                                "-            \"name\": \"India\",",
+                                "-            \"alpha3_code\": \"IND\",",
+                                "-            \"alpha2_code\": \"IN\"",
+                                "-        },",
+                                "        \"messages\": [",
+                                "-            \"Country found matching code [IND].\"",
+                                "-        ]",
+                                "+            \"Country found matching code [USA].\"",
+                                "+        ],",
+                                "+        \"result\": {",
+                                "+            \"name\": \"United States of America\",",
+                                "+            \"alpha2_code\": \"US\",",
+                                "+            \"alpha3_code\": \"USA\"",
+                                "+        }",
+                                "    }"
+                            ]
+                        }
                     }
                 }
             ]

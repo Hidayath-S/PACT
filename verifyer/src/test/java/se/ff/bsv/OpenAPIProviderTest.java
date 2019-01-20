@@ -17,7 +17,7 @@ import au.com.dius.pact.provider.junit.target.TestTarget;
 @RunWith(PactRunner.class)
 @Provider("getCountryService")
 @PactFolder("../pacts")
-@VerificationReports(value = {"json"}, reportDir = "../pacts")
+//@VerificationReports(value = {"json"}, reportDir = "../pacts")
 public class OpenAPIProviderTest {
 	public OpenAPIProviderTest() throws MalformedURLException {
 	}

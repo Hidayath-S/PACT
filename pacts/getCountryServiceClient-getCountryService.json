@@ -10,7 +10,7 @@
             "description": "A request for alpha2_code IN",
             "request": {
                 "method": "GET",
-                "path": "/country/get/iso3code/IND"
+                "path": "/country/get/iso3code/USA"
             },
             "response": {
                 "status": 200,

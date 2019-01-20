@@ -32,7 +32,7 @@ public class getCountryClient {
 	
 	public String getCountryDetails() {
 		//String url="http://services.groupkt.com/country/get/iso3code/IND";
-		String url=String.format("http://localhost:%d/country/get/iso3code/IND",port);
+		String url=String.format("http://localhost:%d/country/get/iso3code/USA",port);
 		System.out.println("using the URL="+url);
 		try {
 			HttpResponse r=Request.Get(url).addHeader("Accept","application/json").execute().returnResponse();

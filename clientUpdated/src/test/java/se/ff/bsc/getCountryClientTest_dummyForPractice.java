@@ -25,7 +25,7 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.*;
 
 
-public class getCountryClientTest {
+public class getCountryClientTest_dummyForPractice {
 	@Rule
 	public PactProviderRuleMk2 provider= new PactProviderRuleMk2("getCountryService","localhost",1234,this);
 	
@@ -40,24 +40,43 @@ public RequestResponsePact createPact(PactDslWithProvider builder) throws Except
 	
 	
 	DslPart userDetails= new PactDslJsonBody()
-			.object("RestResponse")
-			.array("messages")
-			.stringType("Country found matching code [IND].")
-			//.array("messages")
-		
-			.closeArray()
-			.object("result")	
-			.stringType("name","India")
-			.stringType("alpha2_code","IN")
-			//.stringValue("alpha3_code", "IND")
-			.stringType("alpha3_code","IND")
+			//.object()
+			.array("accounting")
+			.object()
+			.stringType("firstName","John")
+			.stringType("lastName","Doe")
+			.integerType("age", 23)
 			.closeObject()
+			.object()
+			.stringType("firstName", "Mary")
+			.stringType("lastName", "Smith")
+			.integerType("age", 32)
+			.closeObject()
+			.closeArray()
+			//.closeObject()
+			.array("sales")
+			.object()
+			.stringType("firstName","Sally")
+			.stringType("lastName","Green")
+			.integerType("age", 27)
+			.closeObject()
+			.object()
+			.stringType("firstName", "Jim")
+			.stringType("lastName", "Galley")
+			.integerType("age", 41)
+			.closeObject()
+			.closeArray()
+			
+			
+
+
+			
 			.asBody();
 	
 	return builder
 			.given("There is a country with alpha2_code as IN having name as India")
             .uponReceiving("A request for alpha2_code IN")
-            .path("/country/get/iso3code/USA")
+            .path("/country/get/iso3code/IND")
             
             .method("GET")
             .willRespondWith()
@@ -65,8 +84,6 @@ public RequestResponsePact createPact(PactDslWithProvider builder) throws Except
             .headers(headers)
             .body(userDetails)
             .toPact();
-	
-	
 	
 }
 
