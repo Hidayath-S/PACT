@@ -39,40 +39,21 @@ public RequestResponsePact createPact(PactDslWithProvider builder) throws Except
 	headers.put("Content-Type", "application/json");
 	
 	
-	DslPart userDetails= new PactDslJsonBody()
-			//.object()
-			.array("accounting")
-			.object()
-			.stringType("firstName","John")
-			.stringType("lastName","Doe")
-			.integerType("age", 23)
-			.closeObject()
-			.object()
-			.stringType("firstName", "Mary")
-			.stringType("lastName", "Smith")
-			.integerType("age", 32)
-			.closeObject()
-			.closeArray()
-			//.closeObject()
-			.array("sales")
-			.object()
-			.stringType("firstName","Sally")
-			.stringType("lastName","Green")
-			.integerType("age", 27)
-			.closeObject()
-			.object()
-			.stringType("firstName", "Jim")
-			.stringType("lastName", "Galley")
-			.integerType("age", 41)
-			.closeObject()
-			.closeArray()
-			
-			
-
-
-			
-			.asBody();
 	
+	
+	DslPart userDetails= new PactDslJsonBody()
+			
+			.object("RestResponse")
+			.array("messages")
+			.stringType("Total [249] records found.")
+		    .closeArray()
+		    .minArrayLike("result", 3, 4)
+			.stringType("name","India")
+			.stringType("alpha2_code","IN")
+			.stringType("alpha3_code","IND")
+			.closeArray()
+			.closeObject()
+			.asBody();	
 	return builder
 			.given("There is a country with alpha2_code as IN having name as India")
             .uponReceiving("A request for alpha2_code IN")
