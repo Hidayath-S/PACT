@@ -1,5 +1,6 @@
 package se.ff.bsc;
 import au.com.dius.pact.consumer.Pact;
+import au.com.dius.pact.consumer.PactProviderRule;
 import au.com.dius.pact.consumer.PactProviderRuleMk2;
 import au.com.dius.pact.consumer.PactVerification;
 import au.com.dius.pact.consumer.dsl.DslPart;
@@ -28,7 +29,7 @@ import org.json.simple.parser.*;
 public class getCountryClientTest_dummyForPractice {
 	@Rule
 	public PactProviderRuleMk2 provider= new PactProviderRuleMk2("getCountryService","localhost",1234,this);
-	
+	//public PactProviderRule provider = new PactProviderRule(provider, host, port, target);
 	
 @Pact(consumer="getCountryServiceClient")
 public RequestResponsePact createPact(PactDslWithProvider builder) throws Exception {

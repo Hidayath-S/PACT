@@ -31,6 +31,7 @@
       <groupId>au.com.dius</groupId>
       <artifactId>pact-jvm-consumer-junit_2.12</artifactId>
       <version>3.5.10</version>
+      
       <scope>test</scope>
     </dependency>
     <!-- https://mvnrepository.com/artifact/org.json/json -->
