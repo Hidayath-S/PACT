@@ -30,7 +30,7 @@ public class MobileWsClient {
 	
 	
 	public String getUserDetails(String userId) {
-		String url=String.format("Http://localhost:%d/users/%s",port,userId);
+		String url=String.format("https://localhost:%d/users/%s",port,userId);
 		System.out.println("using the URL="+url);
 		try {
 			HttpResponse r=Request.Get(url).addHeader("Accept","application/json").execute().returnResponse();

@@ -37,24 +37,25 @@
 
     
   </dependencies>
-<!--   <build> -->
-<!--   <plugins> -->
-<!--   <plugin> -->
-<!--     <groupId>au.com.dius</groupId> -->
-<!--     <artifactId>pact-jvm-provider-maven_2.12</artifactId> -->
-<!--     <version>3.5.11</version> -->
-<!--     <configuration> -->
-<!--       <serviceProviders> -->
-<!--         <serviceProvider> -->
-<!--           <name>getCountryService</name> -->
-<!--           <pactFileDirectory>path/to/pacts</pactFileDirectory> -->
-<!--           <trustStore>relative/path/to/trustStore.jks</trustStore> -->
-<!--           <trustStorePassword>changeit</trustStorePassword> -->
-<!--         </serviceProvider> -->
-<!--       </serviceProviders> -->
-<!--     </configuration> -->
-<!-- </plugin> -->
-<!-- </plugins></build> -->
+  <build>
+  <plugins>
+  <plugin>
+    <groupId>au.com.dius</groupId>
+    <artifactId>pact-jvm-provider-maven_2.12</artifactId>
+    <version>3.5.11</version>
+    <configuration>
+      <serviceProviders>
+        <serviceProvider>
+          <name>UserService</name>
+          <pactFileDirectory>C:/Users/Hidayath/git/PACT/pacts</pactFileDirectory>
+          <insecure>true</insecure>
+          <trustStore>C:/Users/Hidayath/keystore.jks</trustStore>
+          <trustStorePassword>abc123</trustStorePassword>
+        </serviceProvider>
+      </serviceProviders>
+    </configuration>
+</plugin>
+</plugins></build>
   
   
 </project>

@@ -1,5 +1,6 @@
 package se.ff.bsc;
 import au.com.dius.pact.consumer.Pact;
+import au.com.dius.pact.consumer.PactHttpsProviderRuleMk2;
 import au.com.dius.pact.consumer.PactProviderRuleMk2;
 import au.com.dius.pact.consumer.PactVerification;
 import au.com.dius.pact.consumer.dsl.DslPart;
@@ -19,7 +20,7 @@ import static org.junit.Assert.assertTrue;
 
 public class MobileWsClientTest {
 	@Rule
-	public PactProviderRuleMk2 provider= new PactProviderRuleMk2("UserService","localhost",1234,this); 
+	public PactHttpsProviderRuleMk2 provider= new PactHttpsProviderRuleMk2("UserService","localhost",8082,this); 
 	
 @Pact(consumer="UserServiceClient")
 public RequestResponsePact createPact(PactDslWithProvider builder) {

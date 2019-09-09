@@ -32,11 +32,14 @@ public class UserController {
 			returnValue.setEmail("hiddu91@gmail.com");
 			returnValue.setUserId(userId);
 			
-		}else {
+		}else if(userId.equals("1002")) {
 			returnValue.setFirstName("Salman");
 			returnValue.setLastName("S");
 			returnValue.setEmail("sms9211@gmail.com");
 			returnValue.setUserId(userId);
+		}else {
+			returnValue.setFirstName("Invalid");
+			returnValue.setEmail("Duplicate payment found in GPO Database with the same : ApplId="+userId+" and ApplPmtId = "+userId+".");
 		}
 		
 		return new ResponseEntity<UserRest>(returnValue,HttpStatus.OK);
