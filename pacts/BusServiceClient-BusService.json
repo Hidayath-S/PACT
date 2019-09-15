@@ -1,16 +1,16 @@
 {
     "provider": {
-        "name": "getCountryService"
+        "name": "BusService"
     },
     "consumer": {
-        "name": "getCountryServiceClient"
+        "name": "BusServiceClient"
     },
     "interactions": [
         {
-            "description": "A request for alpha2_code IN",
+            "description": "A request for eta for bus number 613 to Hammersmith bus station",
             "request": {
                 "method": "GET",
-                "path": "/country/get/iso3code/USA"
+                "path": "/bus/Hammersmith/613"
             },
             "response": {
                 "status": 200,
@@ -18,20 +18,13 @@
                     "Content-Type": "application/json"
                 },
                 "body": {
-                    "RestResponse": {
-                        "result": {
-                            "name": "India",
-                            "alpha3_code": "IND",
-                            "alpha2_code": "IN"
-                        },
-                        "messages": [
-                            "Country found matching code [IND]."
-                        ]
-                    }
+                    "eta": 4,
+                    "nr": "613",
+                    "station": "Hammersmith"
                 },
                 "matchingRules": {
                     "body": {
-                        "$.RestResponse.messages[0]": {
+                        "$.station": {
                             "matchers": [
                                 {
                                     "match": "type"
@@ -39,16 +32,7 @@
                             ],
                             "combine": "AND"
                         },
-                        "$.RestResponse.result.name": {
-                            "matchers": [
-                                {
-                                    "match": "regex",
-                                    "regex": "[a-zA-Z]*"
-                                }
-                            ],
-                            "combine": "AND"
-                        },
-                        "$.RestResponse.result.alpha2_code": {
+                        "$.nr": {
                             "matchers": [
                                 {
                                     "match": "type"
@@ -56,10 +40,10 @@
                             ],
                             "combine": "AND"
                         },
-                        "$.RestResponse.result.alpha3_code": {
+                        "$.eta": {
                             "matchers": [
                                 {
-                                    "match": "type"
+                                    "match": "integer"
                                 }
                             ],
                             "combine": "AND"
@@ -69,7 +53,7 @@
             },
             "providerStates": [
                 {
-                    "name": "There is a country with alpha2_code as IN having name as India"
+                    "name": "There is a bus with number 613 arriving to Hammersmith bus station"
                 }
             ]
         }
