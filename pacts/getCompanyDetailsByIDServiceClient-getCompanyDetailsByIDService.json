@@ -1,0 +1,73 @@
+{
+    "provider": {
+        "name": "getCompanyDetailsByIDService"
+    },
+    "consumer": {
+        "name": "getCompanyDetailsByIDServiceClient"
+    },
+    "interactions": [
+        {
+            "description": "A request for companyDetails with Id=49",
+            "request": {
+                "method": "GET",
+                "path": "/company/49"
+            },
+            "response": {
+                "status": 200,
+                "headers": {
+                    "Content-Type": "application/json"
+                },
+                "body": {
+                    "Status": 0,
+                    "Description": "Seventy One Desc",
+                    "CreatedBy": 0,
+                    "UpdatedDate": "2019-10-22T06:19:52.493",
+                    "CreatedDate": "2019-10-22T06:19:52.493",
+                    "Id": 49,
+                    "Name": "Seventy One"
+                },
+                "matchingRules": {
+                    "body": {
+                        "$.Id": {
+                            "matchers": [
+                                {
+                                    "match": "integer"
+                                }
+                            ],
+                            "combine": "AND"
+                        },
+                        "$.CreatedBy": {
+                            "matchers": [
+                                {
+                                    "match": "integer"
+                                }
+                            ],
+                            "combine": "AND"
+                        },
+                        "$.Status": {
+                            "matchers": [
+                                {
+                                    "match": "integer"
+                                }
+                            ],
+                            "combine": "AND"
+                        }
+                    }
+                }
+            },
+            "providerStates": [
+                {
+                    "name": "There is a company with Id=49"
+                }
+            ]
+        }
+    ],
+    "metadata": {
+        "pact-specification": {
+            "version": "3.0.0"
+        },
+        "pact-jvm": {
+            "version": "3.5.10"
+        }
+    }
+}

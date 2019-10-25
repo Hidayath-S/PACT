@@ -1,0 +1,105 @@
+{
+    "provider": {
+        "name": "getCompanyDetailsService"
+    },
+    "consumer": {
+        "name": "getCompanyDetailsServiceClient"
+    },
+    "interactions": [
+        {
+            "description": "A request for companyDetails ALL",
+            "request": {
+                "method": "GET",
+                "path": "/company/ALL"
+            },
+            "response": {
+                "status": 200,
+                "headers": {
+                    "Content-Type": "application/json"
+                },
+                "body": {
+                    "Status": 1,
+                    "Description": "Infosys Ltd",
+                    "CreatedBy": 1,
+                    "UpdatedDate": "2017-12-14T00:00:00",
+                    "CreatedDate": "2017-12-12T00:00:00",
+                    "Id": "1",
+                    "Name": "Infosys"
+                },
+                "matchingRules": {
+                    "body": {
+                        "$.Id": {
+                            "matchers": [
+                                {
+                                    "match": "type"
+                                }
+                            ],
+                            "combine": "AND"
+                        },
+                        "$.Name": {
+                            "matchers": [
+                                {
+                                    "match": "type"
+                                }
+                            ],
+                            "combine": "AND"
+                        },
+                        "$.Description": {
+                            "matchers": [
+                                {
+                                    "match": "type"
+                                }
+                            ],
+                            "combine": "AND"
+                        },
+                        "$.CreatedBy": {
+                            "matchers": [
+                                {
+                                    "match": "integer"
+                                }
+                            ],
+                            "combine": "AND"
+                        },
+                        "$.CreatedDate": {
+                            "matchers": [
+                                {
+                                    "match": "type"
+                                }
+                            ],
+                            "combine": "AND"
+                        },
+                        "$.UpdatedDate": {
+                            "matchers": [
+                                {
+                                    "match": "type"
+                                }
+                            ],
+                            "combine": "AND"
+                        },
+                        "$.Status": {
+                            "matchers": [
+                                {
+                                    "match": "integer"
+                                }
+                            ],
+                            "combine": "AND"
+                        }
+                    }
+                }
+            },
+            "providerStates": [
+                {
+                    "name": "There are companies with different companyId's"
+                }
+            ]
+        }
+    ],
+    "metadata": {
+        "pact-specification": {
+            "version": "3.0.0"
+        },
+        "pact-jvm": {
+            "version": "3.5.10"
+        }
+    }
+}
