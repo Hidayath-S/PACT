@@ -18,41 +18,453 @@
                     "Content-Type": "application/json"
                 },
                 "body": {
-                    "Status": 1,
-                    "Description": "Infosys Ltd",
-                    "CreatedBy": 1,
-                    "UpdatedDate": "2017-12-14T00:00:00",
-                    "CreatedDate": "2017-12-12T00:00:00",
-                    "Id": "1",
-                    "Name": "Infosys"
+                    "CompanyDetails": [
+                        {
+                            "Status": 0,
+                            "Description": "Infosys limited",
+                            "CreatedBy": 1,
+                            "UpdatedDate": "2019-10-22T06:19:52.493",
+                            "CreatedDate": "2019-10-22T06:19:52.493",
+                            "Id": 1,
+                            "Name": "Infosys"
+                        },
+                        {
+                            "Status": 0,
+                            "Description": "Infosys limited",
+                            "CreatedBy": 1,
+                            "UpdatedDate": "2019-10-22T06:19:52.493",
+                            "CreatedDate": "2019-10-22T06:19:52.493",
+                            "Id": 1,
+                            "Name": "Infosys"
+                        },
+                        {
+                            "Status": 0,
+                            "Description": "Infosys limited",
+                            "CreatedBy": 1,
+                            "UpdatedDate": "2019-10-22T06:19:52.493",
+                            "CreatedDate": "2019-10-22T06:19:52.493",
+                            "Id": 1,
+                            "Name": "Infosys"
+                        },
+                        {
+                            "Status": 0,
+                            "Description": "Infosys limited",
+                            "CreatedBy": 1,
+                            "UpdatedDate": "2019-10-22T06:19:52.493",
+                            "CreatedDate": "2019-10-22T06:19:52.493",
+                            "Id": 1,
+                            "Name": "Infosys"
+                        },
+                        {
+                            "Status": 0,
+                            "Description": "Infosys limited",
+                            "CreatedBy": 1,
+                            "UpdatedDate": "2019-10-22T06:19:52.493",
+                            "CreatedDate": "2019-10-22T06:19:52.493",
+                            "Id": 1,
+                            "Name": "Infosys"
+                        },
+                        {
+                            "Status": 0,
+                            "Description": "Infosys limited",
+                            "CreatedBy": 1,
+                            "UpdatedDate": "2019-10-22T06:19:52.493",
+                            "CreatedDate": "2019-10-22T06:19:52.493",
+                            "Id": 1,
+                            "Name": "Infosys"
+                        },
+                        {
+                            "Status": 0,
+                            "Description": "Infosys limited",
+                            "CreatedBy": 1,
+                            "UpdatedDate": "2019-10-22T06:19:52.493",
+                            "CreatedDate": "2019-10-22T06:19:52.493",
+                            "Id": 1,
+                            "Name": "Infosys"
+                        },
+                        {
+                            "Status": 0,
+                            "Description": "Infosys limited",
+                            "CreatedBy": 1,
+                            "UpdatedDate": "2019-10-22T06:19:52.493",
+                            "CreatedDate": "2019-10-22T06:19:52.493",
+                            "Id": 1,
+                            "Name": "Infosys"
+                        },
+                        {
+                            "Status": 0,
+                            "Description": "Infosys limited",
+                            "CreatedBy": 1,
+                            "UpdatedDate": "2019-10-22T06:19:52.493",
+                            "CreatedDate": "2019-10-22T06:19:52.493",
+                            "Id": 1,
+                            "Name": "Infosys"
+                        },
+                        {
+                            "Status": 0,
+                            "Description": "Infosys limited",
+                            "CreatedBy": 1,
+                            "UpdatedDate": "2019-10-22T06:19:52.493",
+                            "CreatedDate": "2019-10-22T06:19:52.493",
+                            "Id": 1,
+                            "Name": "Infosys"
+                        },
+                        {
+                            "Status": 0,
+                            "Description": "Infosys limited",
+                            "CreatedBy": 1,
+                            "UpdatedDate": "2019-10-22T06:19:52.493",
+                            "CreatedDate": "2019-10-22T06:19:52.493",
+                            "Id": 1,
+                            "Name": "Infosys"
+                        },
+                        {
+                            "Status": 0,
+                            "Description": "Infosys limited",
+                            "CreatedBy": 1,
+                            "UpdatedDate": "2019-10-22T06:19:52.493",
+                            "CreatedDate": "2019-10-22T06:19:52.493",
+                            "Id": 1,
+                            "Name": "Infosys"
+                        },
+                        {
+                            "Status": 0,
+                            "Description": "Infosys limited",
+                            "CreatedBy": 1,
+                            "UpdatedDate": "2019-10-22T06:19:52.493",
+                            "CreatedDate": "2019-10-22T06:19:52.493",
+                            "Id": 1,
+                            "Name": "Infosys"
+                        },
+                        {
+                            "Status": 0,
+                            "Description": "Infosys limited",
+                            "CreatedBy": 1,
+                            "UpdatedDate": "2019-10-22T06:19:52.493",
+                            "CreatedDate": "2019-10-22T06:19:52.493",
+                            "Id": 1,
+                            "Name": "Infosys"
+                        },
+                        {
+                            "Status": 0,
+                            "Description": "Infosys limited",
+                            "CreatedBy": 1,
+                            "UpdatedDate": "2019-10-22T06:19:52.493",
+                            "CreatedDate": "2019-10-22T06:19:52.493",
+                            "Id": 1,
+                            "Name": "Infosys"
+                        },
+                        {
+                            "Status": 0,
+                            "Description": "Infosys limited",
+                            "CreatedBy": 1,
+                            "UpdatedDate": "2019-10-22T06:19:52.493",
+                            "CreatedDate": "2019-10-22T06:19:52.493",
+                            "Id": 1,
+                            "Name": "Infosys"
+                        },
+                        {
+                            "Status": 0,
+                            "Description": "Infosys limited",
+                            "CreatedBy": 1,
+                            "UpdatedDate": "2019-10-22T06:19:52.493",
+                            "CreatedDate": "2019-10-22T06:19:52.493",
+                            "Id": 1,
+                            "Name": "Infosys"
+                        },
+                        {
+                            "Status": 0,
+                            "Description": "Infosys limited",
+                            "CreatedBy": 1,
+                            "UpdatedDate": "2019-10-22T06:19:52.493",
+                            "CreatedDate": "2019-10-22T06:19:52.493",
+                            "Id": 1,
+                            "Name": "Infosys"
+                        },
+                        {
+                            "Status": 0,
+                            "Description": "Infosys limited",
+                            "CreatedBy": 1,
+                            "UpdatedDate": "2019-10-22T06:19:52.493",
+                            "CreatedDate": "2019-10-22T06:19:52.493",
+                            "Id": 1,
+                            "Name": "Infosys"
+                        },
+                        {
+                            "Status": 0,
+                            "Description": "Infosys limited",
+                            "CreatedBy": 1,
+                            "UpdatedDate": "2019-10-22T06:19:52.493",
+                            "CreatedDate": "2019-10-22T06:19:52.493",
+                            "Id": 1,
+                            "Name": "Infosys"
+                        },
+                        {
+                            "Status": 0,
+                            "Description": "Infosys limited",
+                            "CreatedBy": 1,
+                            "UpdatedDate": "2019-10-22T06:19:52.493",
+                            "CreatedDate": "2019-10-22T06:19:52.493",
+                            "Id": 1,
+                            "Name": "Infosys"
+                        },
+                        {
+                            "Status": 0,
+                            "Description": "Infosys limited",
+                            "CreatedBy": 1,
+                            "UpdatedDate": "2019-10-22T06:19:52.493",
+                            "CreatedDate": "2019-10-22T06:19:52.493",
+                            "Id": 1,
+                            "Name": "Infosys"
+                        },
+                        {
+                            "Status": 0,
+                            "Description": "Infosys limited",
+                            "CreatedBy": 1,
+                            "UpdatedDate": "2019-10-22T06:19:52.493",
+                            "CreatedDate": "2019-10-22T06:19:52.493",
+                            "Id": 1,
+                            "Name": "Infosys"
+                        },
+                        {
+                            "Status": 0,
+                            "Description": "Infosys limited",
+                            "CreatedBy": 1,
+                            "UpdatedDate": "2019-10-22T06:19:52.493",
+                            "CreatedDate": "2019-10-22T06:19:52.493",
+                            "Id": 1,
+                            "Name": "Infosys"
+                        },
+                        {
+                            "Status": 0,
+                            "Description": "Infosys limited",
+                            "CreatedBy": 1,
+                            "UpdatedDate": "2019-10-22T06:19:52.493",
+                            "CreatedDate": "2019-10-22T06:19:52.493",
+                            "Id": 1,
+                            "Name": "Infosys"
+                        },
+                        {
+                            "Status": 0,
+                            "Description": "Infosys limited",
+                            "CreatedBy": 1,
+                            "UpdatedDate": "2019-10-22T06:19:52.493",
+                            "CreatedDate": "2019-10-22T06:19:52.493",
+                            "Id": 1,
+                            "Name": "Infosys"
+                        },
+                        {
+                            "Status": 0,
+                            "Description": "Infosys limited",
+                            "CreatedBy": 1,
+                            "UpdatedDate": "2019-10-22T06:19:52.493",
+                            "CreatedDate": "2019-10-22T06:19:52.493",
+                            "Id": 1,
+                            "Name": "Infosys"
+                        },
+                        {
+                            "Status": 0,
+                            "Description": "Infosys limited",
+                            "CreatedBy": 1,
+                            "UpdatedDate": "2019-10-22T06:19:52.493",
+                            "CreatedDate": "2019-10-22T06:19:52.493",
+                            "Id": 1,
+                            "Name": "Infosys"
+                        },
+                        {
+                            "Status": 0,
+                            "Description": "Infosys limited",
+                            "CreatedBy": 1,
+                            "UpdatedDate": "2019-10-22T06:19:52.493",
+                            "CreatedDate": "2019-10-22T06:19:52.493",
+                            "Id": 1,
+                            "Name": "Infosys"
+                        },
+                        {
+                            "Status": 0,
+                            "Description": "Infosys limited",
+                            "CreatedBy": 1,
+                            "UpdatedDate": "2019-10-22T06:19:52.493",
+                            "CreatedDate": "2019-10-22T06:19:52.493",
+                            "Id": 1,
+                            "Name": "Infosys"
+                        },
+                        {
+                            "Status": 0,
+                            "Description": "Infosys limited",
+                            "CreatedBy": 1,
+                            "UpdatedDate": "2019-10-22T06:19:52.493",
+                            "CreatedDate": "2019-10-22T06:19:52.493",
+                            "Id": 1,
+                            "Name": "Infosys"
+                        },
+                        {
+                            "Status": 0,
+                            "Description": "Infosys limited",
+                            "CreatedBy": 1,
+                            "UpdatedDate": "2019-10-22T06:19:52.493",
+                            "CreatedDate": "2019-10-22T06:19:52.493",
+                            "Id": 1,
+                            "Name": "Infosys"
+                        },
+                        {
+                            "Status": 0,
+                            "Description": "Infosys limited",
+                            "CreatedBy": 1,
+                            "UpdatedDate": "2019-10-22T06:19:52.493",
+                            "CreatedDate": "2019-10-22T06:19:52.493",
+                            "Id": 1,
+                            "Name": "Infosys"
+                        },
+                        {
+                            "Status": 0,
+                            "Description": "Infosys limited",
+                            "CreatedBy": 1,
+                            "UpdatedDate": "2019-10-22T06:19:52.493",
+                            "CreatedDate": "2019-10-22T06:19:52.493",
+                            "Id": 1,
+                            "Name": "Infosys"
+                        },
+                        {
+                            "Status": 0,
+                            "Description": "Infosys limited",
+                            "CreatedBy": 1,
+                            "UpdatedDate": "2019-10-22T06:19:52.493",
+                            "CreatedDate": "2019-10-22T06:19:52.493",
+                            "Id": 1,
+                            "Name": "Infosys"
+                        },
+                        {
+                            "Status": 0,
+                            "Description": "Infosys limited",
+                            "CreatedBy": 1,
+                            "UpdatedDate": "2019-10-22T06:19:52.493",
+                            "CreatedDate": "2019-10-22T06:19:52.493",
+                            "Id": 1,
+                            "Name": "Infosys"
+                        },
+                        {
+                            "Status": 0,
+                            "Description": "Infosys limited",
+                            "CreatedBy": 1,
+                            "UpdatedDate": "2019-10-22T06:19:52.493",
+                            "CreatedDate": "2019-10-22T06:19:52.493",
+                            "Id": 1,
+                            "Name": "Infosys"
+                        },
+                        {
+                            "Status": 0,
+                            "Description": "Infosys limited",
+                            "CreatedBy": 1,
+                            "UpdatedDate": "2019-10-22T06:19:52.493",
+                            "CreatedDate": "2019-10-22T06:19:52.493",
+                            "Id": 1,
+                            "Name": "Infosys"
+                        },
+                        {
+                            "Status": 0,
+                            "Description": "Infosys limited",
+                            "CreatedBy": 1,
+                            "UpdatedDate": "2019-10-22T06:19:52.493",
+                            "CreatedDate": "2019-10-22T06:19:52.493",
+                            "Id": 1,
+                            "Name": "Infosys"
+                        },
+                        {
+                            "Status": 0,
+                            "Description": "Infosys limited",
+                            "CreatedBy": 1,
+                            "UpdatedDate": "2019-10-22T06:19:52.493",
+                            "CreatedDate": "2019-10-22T06:19:52.493",
+                            "Id": 1,
+                            "Name": "Infosys"
+                        },
+                        {
+                            "Status": 0,
+                            "Description": "Infosys limited",
+                            "CreatedBy": 1,
+                            "UpdatedDate": "2019-10-22T06:19:52.493",
+                            "CreatedDate": "2019-10-22T06:19:52.493",
+                            "Id": 1,
+                            "Name": "Infosys"
+                        },
+                        {
+                            "Status": 0,
+                            "Description": "Infosys limited",
+                            "CreatedBy": 1,
+                            "UpdatedDate": "2019-10-22T06:19:52.493",
+                            "CreatedDate": "2019-10-22T06:19:52.493",
+                            "Id": 1,
+                            "Name": "Infosys"
+                        },
+                        {
+                            "Status": 0,
+                            "Description": "Infosys limited",
+                            "CreatedBy": 1,
+                            "UpdatedDate": "2019-10-22T06:19:52.493",
+                            "CreatedDate": "2019-10-22T06:19:52.493",
+                            "Id": 1,
+                            "Name": "Infosys"
+                        },
+                        {
+                            "Status": 0,
+                            "Description": "Infosys limited",
+                            "CreatedBy": 1,
+                            "UpdatedDate": "2019-10-22T06:19:52.493",
+                            "CreatedDate": "2019-10-22T06:19:52.493",
+                            "Id": 1,
+                            "Name": "Infosys"
+                        },
+                        {
+                            "Status": 0,
+                            "Description": "Infosys limited",
+                            "CreatedBy": 1,
+                            "UpdatedDate": "2019-10-22T06:19:52.493",
+                            "CreatedDate": "2019-10-22T06:19:52.493",
+                            "Id": 1,
+                            "Name": "Infosys"
+                        },
+                        {
+                            "Status": 0,
+                            "Description": "Infosys limited",
+                            "CreatedBy": 1,
+                            "UpdatedDate": "2019-10-22T06:19:52.493",
+                            "CreatedDate": "2019-10-22T06:19:52.493",
+                            "Id": 1,
+                            "Name": "Infosys"
+                        },
+                        {
+                            "Status": 0,
+                            "Description": "Infosys limited",
+                            "CreatedBy": 1,
+                            "UpdatedDate": "2019-10-22T06:19:52.493",
+                            "CreatedDate": "2019-10-22T06:19:52.493",
+                            "Id": 1,
+                            "Name": "Infosys"
+                        },
+                        {
+                            "Status": 0,
+                            "Description": "Infosys limited",
+                            "CreatedBy": 1,
+                            "UpdatedDate": "2019-10-22T06:19:52.493",
+                            "CreatedDate": "2019-10-22T06:19:52.493",
+                            "Id": 1,
+                            "Name": "Infosys"
+                        }
+                    ]
                 },
                 "matchingRules": {
                     "body": {
-                        "$.Id": {
+                        "$.CompanyDetails": {
                             "matchers": [
                                 {
-                                    "match": "type"
+                                    "match": "type",
+                                    "min": 7
                                 }
                             ],
                             "combine": "AND"
                         },
-                        "$.Name": {
-                            "matchers": [
-                                {
-                                    "match": "type"
-                                }
-                            ],
-                            "combine": "AND"
-                        },
-                        "$.Description": {
-                            "matchers": [
-                                {
-                                    "match": "type"
-                                }
-                            ],
-                            "combine": "AND"
-                        },
-                        "$.CreatedBy": {
+                        "$.CompanyDetails[*].Id": {
                             "matchers": [
                                 {
                                     "match": "integer"
@@ -60,23 +472,15 @@
                             ],
                             "combine": "AND"
                         },
-                        "$.CreatedDate": {
+                        "$.CompanyDetails[*].CreatedBy": {
                             "matchers": [
                                 {
-                                    "match": "type"
+                                    "match": "integer"
                                 }
                             ],
                             "combine": "AND"
                         },
-                        "$.UpdatedDate": {
-                            "matchers": [
-                                {
-                                    "match": "type"
-                                }
-                            ],
-                            "combine": "AND"
-                        },
-                        "$.Status": {
+                        "$.CompanyDetails[*].Status": {
                             "matchers": [
                                 {
                                     "match": "integer"

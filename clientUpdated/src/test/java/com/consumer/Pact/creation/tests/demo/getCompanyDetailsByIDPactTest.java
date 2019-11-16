@@ -20,7 +20,7 @@ import java.util.Map;
 
 public class getCompanyDetailsByIDPactTest {
 	@Rule
-	public PactProviderRuleMk2 provider = new PactProviderRuleMk2("getCompanyDetailsByIDService", "localhost", 1234, this);
+	public PactProviderRuleMk2 provider = new PactProviderRuleMk2("getCompanyDetailsByIDService", "localhost", 1233, this);
 
 	@Pact(consumer = "getCompanyDetailsByIDServiceClient")
 	public RequestResponsePact createPact(PactDslWithProvider builder) throws Exception {

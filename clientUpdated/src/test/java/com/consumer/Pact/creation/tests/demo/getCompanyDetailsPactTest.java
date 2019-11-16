@@ -30,7 +30,7 @@ import org.json.simple.parser.*;
 
 public class getCompanyDetailsPactTest {
 	@Rule
-	public PactProviderRuleMk2 provider = new PactProviderRuleMk2("getCompanyDetailsService", "localhost", 1234, this);
+	public PactProviderRuleMk2 provider = new PactProviderRuleMk2("getCompanyDetailsService", "localhost", 1233, this);
 
 	@Pact(consumer = "getCompanyDetailsServiceClient")
 	public RequestResponsePact createPact(PactDslWithProvider builder) throws Exception {
@@ -38,24 +38,17 @@ public class getCompanyDetailsPactTest {
 		headers.put("Content-Type", "application/json");
 
 		DslPart companyDetails = new PactDslJsonBody()
-				//.object("Hidayath")
 				
-				
-				
-//				.minArrayLike(7, 48)
-//				
-//				.stringType("Id", "1")
-//				.stringType("Name", "Infosys")
-//				.stringType("Description", "Infosys Ltd")
-//				.integerType("CreatedBy", 1)
-//				.stringType("CreatedDate", "2017-12-12T00:00:00")
-//				.stringType("UpdatedDate", "2017-12-14T00:00:00")
-//				.integerType("Status", 1)
-//				.closeArray()
-				//.closeArray()
-				//.closeObject()
-				
+				.minArrayLike("CompanyDetails",7,48)
+				.integerType("Id", 1)
+				.stringValue("Name", "Infosys")
+				.stringValue("Description", "Infosys limited")
+				.integerType("CreatedBy", 1)
+				.stringValue("CreatedDate", "2019-10-22T06:19:52.493")
+				.stringValue("UpdatedDate", "2019-10-22T06:19:52.493")
+				.integerType("Status", 0)
 				.asBody();
+				
 				
 
 		return builder

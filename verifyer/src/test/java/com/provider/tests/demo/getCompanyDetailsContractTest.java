@@ -1,7 +1,6 @@
 package com.provider.tests.demo;
 
-import java.net.MalformedURLException;
-import java.net.URL;
+
 
 import org.junit.runner.RunWith;
 
@@ -15,20 +14,20 @@ import au.com.dius.pact.provider.junit.target.Target;
 import au.com.dius.pact.provider.junit.target.TestTarget;
 
 @RunWith(PactRunner.class)
-@Provider("getCompanyDetailsByIDService")
+@Provider("getCompanyDetailsService")
 @PactFolder("../pacts")
 @VerificationReports(value = {"json"}, reportDir = "../pacts")
-public class getCompanyDetailsByIDContractTest {
-	public getCompanyDetailsByIDContractTest()  {
+public class getCompanyDetailsContractTest {
+	public getCompanyDetailsContractTest()  {
 	}
 
 	@TestTarget
 	
 	public final Target target= new HttpTarget("http", "localhost", 1234, "");
 
-	@State({"There is a company with Id=49"})
+	@State({"There are companies with different companyId's"})
 	public void getPacts() {
-		System.out.println("There is a country with Id=49 having Description as Seventy One Desc");
+		System.out.println("Displaying all complany details");
 	}}
 
 	

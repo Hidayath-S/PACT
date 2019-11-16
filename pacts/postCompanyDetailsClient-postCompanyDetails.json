@@ -1,0 +1,85 @@
+{
+    "provider": {
+        "name": "postCompanyDetails"
+    },
+    "consumer": {
+        "name": "postCompanyDetailsClient"
+    },
+    "interactions": [
+        {
+            "description": "a request to create new company details",
+            "request": {
+                "method": "POST",
+                "path": "/company",
+                "headers": {
+                    "Content-Type": "application/json"
+                },
+                "body": {
+                    "Id": 0,
+                    "Name": "Seventy One",
+                    "Description": "Seventy One Desc",
+                    "Created By": 0,
+                    "CreatedDate": "2019-10-22T06:19:52.493Z",
+                    "UpdatedDate": "2019-10-22T06:19:52.493Z",
+                    "Status": 0
+                }
+            },
+            "response": {
+                "status": 200,
+                "headers": {
+                    "Content-Type": "application/json"
+                },
+                "body": {
+                    "Status": 0,
+                    "Description": "Seventy One Desc",
+                    "CreatedBy": 0,
+                    "UpdatedDate": "2019-10-22T06:19:52.493Z",
+                    "CreatedDate": "2019-10-22T06:19:52.493Z",
+                    "Id": 49,
+                    "Name": "Seventy One"
+                },
+                "matchingRules": {
+                    "body": {
+                        "$.Id": {
+                            "matchers": [
+                                {
+                                    "match": "integer"
+                                }
+                            ],
+                            "combine": "AND"
+                        },
+                        "$.CreatedBy": {
+                            "matchers": [
+                                {
+                                    "match": "integer"
+                                }
+                            ],
+                            "combine": "AND"
+                        },
+                        "$.Status": {
+                            "matchers": [
+                                {
+                                    "match": "integer"
+                                }
+                            ],
+                            "combine": "AND"
+                        }
+                    }
+                }
+            },
+            "providerStates": [
+                {
+                    "name": "user wants to create new company details with name as Seventy One"
+                }
+            ]
+        }
+    ],
+    "metadata": {
+        "pact-specification": {
+            "version": "3.0.0"
+        },
+        "pact-jvm": {
+            "version": "3.5.10"
+        }
+    }
+}
