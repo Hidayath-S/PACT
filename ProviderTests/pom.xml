@@ -3,11 +3,11 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>se.ff.bsv</groupId>
-  <artifactId>verifyer</artifactId>
+  <artifactId>ProviderTests</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>jar</packaging>
 
-  <name>verifyer</name>
+  <name>ProviderTests</name>
   <url>http://maven.apache.org</url>
 
   <properties>
